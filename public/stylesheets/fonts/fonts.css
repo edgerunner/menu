@@ -1,0 +1,11 @@
+@font-face {
+	font-family: 'JottFLF';
+	font-weight: normal;
+	src: local('JottFLF'), local('JottFLF-Casual'), url('JottFLF-Casual.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'JottFLF';
+	font-weight: bold;
+	src: local('JottFLF'), local('JottFLF-Bold'), url('JottFLF-Bold.ttf') format('truetype');
+}
