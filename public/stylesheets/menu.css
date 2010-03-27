@@ -2,4 +2,12 @@
 
 * {
 	font-family: "JottFLF", "Comic Sans MS", sans-serif;
+	text-align: center;
+}
+
+dt {
+	font-size: 125%;
+	font-weight: bold;
+	margin-top:1ex;
+	border-top: 1px solid black;
 }
