@@ -7,11 +7,14 @@
 
 html {
 	background-color: #57A;
+	background-image: url('../images/blue-bg.png');
 }
 
 body {
+	font-size: 14pt;
 	margin: 1em auto;
 	background-color: white;
+	background-image: url('../images/white-bg.png');
 	border-radius: 2em;
 	-moz-border-radius: 2em;
 	-webkit-border-radius: 2em;
@@ -29,4 +32,10 @@ dt {
 
 dd {
 	margin: 0;
+}
+
+dd small {
+	font-size: %60;
+	text-decoration:underline;
+	vertical-align: top;
 }
