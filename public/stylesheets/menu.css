@@ -3,6 +3,9 @@
 * {
 	font-family: "JottFLF", "Comic Sans MS", sans-serif;
 	text-align: center;
+}
+
+html {
 	background-color: #57A;
 }
 
@@ -10,6 +13,8 @@ body {
 	margin: 1em auto;
 	background-color: white;
 	border-radius: 2em;
+	width: 12em;
+	padding: 1em;
 }
 
 dt {
