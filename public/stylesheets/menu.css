@@ -13,6 +13,8 @@ body {
 	margin: 1em auto;
 	background-color: white;
 	border-radius: 2em;
+	-moz-border-radius: 2em;
+	-webkit-border-radius: 2em;
 	width: 12em;
 	padding: 1em;
 }
