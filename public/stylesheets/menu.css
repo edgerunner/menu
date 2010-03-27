@@ -3,11 +3,23 @@
 * {
 	font-family: "JottFLF", "Comic Sans MS", sans-serif;
 	text-align: center;
+	background-color: #57A;
+}
+
+body {
+	margin: 1em auto;
+	background-color: white;
+	border-radius: 2em;
 }
 
 dt {
 	font-size: 125%;
 	font-weight: bold;
-	margin-top:1ex;
-	border-top: 1px solid black;
+	margin-top:0.5em;
+	padding-top: 0.3em;
+	border-top: 1px dashed black;
+}
+
+dd {
+	margin: 0;
 }
