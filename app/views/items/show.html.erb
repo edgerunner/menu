@@ -1,0 +1,28 @@
+<p>
+  <b>Name:</b>
+  <%= @item.name %>
+</p>
+
+<p>
+  <b>Details:</b>
+  <%= @item.details %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @item.price %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%= @item.position %>
+</p>
+
+<p>
+  <b>Active:</b>
+  <%= @item.active %>
+</p>
+
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>
