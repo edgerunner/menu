@@ -35,7 +35,6 @@ dd {
 }
 
 dd small {
-	font-size: %60;
-	text-decoration:underline;
+	font-size: .7em;
 	vertical-align: top;
 }
