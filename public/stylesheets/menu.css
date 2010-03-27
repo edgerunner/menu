@@ -38,3 +38,18 @@ dd small {
 	font-size: .7em;
 	vertical-align: top;
 }
+
+input[type=text] {
+	font: inherit;
+	border: none;
+	color: #163460;
+	width: 100%;
+	background-color:transparent;
+	border-bottom: 1px solid #5577AA;
+}
+
+label {
+	color: #57A;
+	font-size: .7em;
+	margin-top: .3em;
+}
