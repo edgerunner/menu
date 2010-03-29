@@ -2,4 +2,28 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  date:
+    formats:
+      close: "%A, %B %d"
+  activerecord:
+    models:
+      item: "Menu item"
+      
+  helpers:
+    label:
+      item:
+        name: "What is it called?"
+        details: "What goes alongside?"
+        price: "How much is it?"
+        active: "Do we have it now?"
+    submit:
+      item:
+        create: "Add this"
+
+  todays_menu: "Today's menu"
+
+  notice:
+    item:
+      created: "{{name}} added"
+      updated: "{{name}} updated"
+      deleted: "{{name}} deleted"

@@ -6,15 +6,14 @@
 }
 
 html {
-	background-color: #57A;
-	background-image: url('../images/blue-bg.png');
+	background: #57A url('../images/blue-bg.png') repeat-x;
 }
 
 body {
 	font-size: 14pt;
 	margin: 1em auto;
 	background-color: white;
-	background-image: url('../images/white-bg.png');
+	background: white url('../images/white-bg.png') repeat-x;
 	border-radius: 2em;
 	-moz-border-radius: 2em;
 	-webkit-border-radius: 2em;
@@ -22,9 +21,18 @@ body {
 	padding: 1em;
 }
 
+dl {
+	margin:0;
+}
+
+dl.inactive { color: #999;}
+dl.inactive dt { text-decoration: line-through; }
+
 dt {
 	font-size: 125%;
 	font-weight: bold;
+}
+#menu dl {
 	margin-top:0.5em;
 	padding-top: 0.3em;
 	border-top: 1px dashed black;
@@ -71,3 +79,15 @@ input[type=submit] {
 input:hover[type=submit] {
 	background-color: #163460;
 }
+
+input[type=checkbox] {
+	float: right;
+	width: auto;
+}
+
+form {
+	border-top: 1em solid #57A;
+	margin-top: 1em;
+}
+
+p.notice { color: #c00;}

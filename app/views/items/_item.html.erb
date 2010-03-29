@@ -1,0 +1,5 @@
+<% content_tag_for :dl, item, :class => (item.active? ? "" : "inactive") do %>
+  <dt><%= item.name %></dt>
+  <dd><%= item.details %></dd>
+  <dd><%= small_cents number_to_currency(item.price) %></dd>
+<% end -%>

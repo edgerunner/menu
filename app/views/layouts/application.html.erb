@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title><%= t :todays_menu %></title>
+	<%= stylesheet_link_tag 'menu' %>
+	<%= javascript_include_tag :defaults %>
+	<%= csrf_meta_tag %>
+  </head>
+  <body>
+    <h3>The Incredible Halk Köftecisi</h3>
+    <%= yield %>
+	  <address><small>0212</small> 244 43 79</address>
+  </body>
+</html>
