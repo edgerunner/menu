@@ -86,8 +86,23 @@ input[type=checkbox] {
 }
 
 form {
-	border-top: 1em solid #57A;
 	margin-top: 1em;
 }
 
+form:before {
+	display: block;
+	content: " ";
+	background-color:#57A;
+	border-top-right-radius: 1em;
+	border-top-left-radius: 1em;
+	-moz-border-top-right-radius: 1em;
+	-moz-border-top-left-radius: 1em;
+	-webkit-border-top-right-radius: 1em;
+	-webkit-border-top-left-radius: 1em;
+	height: 1.3em; width: 100%;
+}
+
+
 p.notice { color: #c00;}
+
+
