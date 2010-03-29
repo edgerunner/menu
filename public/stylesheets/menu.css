@@ -70,8 +70,8 @@ input[type=submit] {
 	background-color:#57A;
 	border-bottom-right-radius: 1em;
 	border-bottom-left-radius: 1em;
-	-moz-border-bottom-right-radius: 1em;
-	-moz-border-bottom-left-radius: 1em;
+	-moz-border-radius-bottomleft: 1em;
+	-moz-border-radius-bottomright: 1em;
 	-webkit-border-bottom-right-radius: 1em;
 	-webkit-border-bottom-left-radius: 1em;
 }
@@ -95,8 +95,8 @@ form:before {
 	background-color:#57A;
 	border-top-right-radius: 1em;
 	border-top-left-radius: 1em;
-	-moz-border-top-right-radius: 1em;
-	-moz-border-top-left-radius: 1em;
+	-moz-border-radius-topleft: 1em;
+	-moz-border-radius-topright: 1em;
 	-webkit-border-top-right-radius: 1em;
 	-webkit-border-top-left-radius: 1em;
 	height: 1.3em; width: 100%;
