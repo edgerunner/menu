@@ -1,13 +1,12 @@
 <h1 id="title"><%= t(:todays_menu) %></h1>
 <p id="date"><%= l @date, :format => :close %></p>
 
-<p class="notice"><%= notice %></p>
+<%= flash_paragraphs %>
 
 <div id="menu">
-
 	<% @items.each do |item| %>
 		<%= render item %>
 	<% end -%>
-	
-	<%= render "form", :item => @new_item %>
 </div>
+	
+<%= render "form", :item => @new_item %>

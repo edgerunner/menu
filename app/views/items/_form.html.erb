@@ -1,7 +1,7 @@
 <% form_for(item) do |f| %>
-  <%= f.error_messages %>
+<%= error_messages_for(item) %>
 
-  
+<dl>
   <dt>
     <%= f.label :name %><br />
     <%= f.text_field :name %>
@@ -20,4 +20,5 @@
   <dt>
     <%= f.submit %>
   </dt>
+</dl>
 <% end %>

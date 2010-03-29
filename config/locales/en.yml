@@ -8,7 +8,11 @@ en:
   activerecord:
     models:
       item: "Menu item"
-      
+    attributes:
+      item:
+        name: "Item name"
+        details: "Item details"
+    
   helpers:
     label:
       item:
@@ -27,3 +31,14 @@ en:
       created: "{{name}} added"
       updated: "{{name}} updated"
       deleted: "{{name}} deleted"
+      
+  errors:
+    template:
+      header: 
+        one: "There is an error"
+        other: "There are some errors"
+      body: "We could not do what you asked for"
+    models:
+      created: "{{name}} was NOT added!"
+      updated: "{{name}} was NOT updated!"
+      deleted: "{{name}} was NOT deleted!"

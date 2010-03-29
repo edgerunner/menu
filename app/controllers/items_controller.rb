@@ -1,9 +1,10 @@
 class ItemsController < ApplicationController
+  
   def index
     #I18n.locale = :en
     @date = params[:date] || Date.today
     @items = Item.all
-    @new_item = Item.new
+    @new_item = flash[:item] || Item.new
   end
 
 
@@ -14,11 +15,11 @@ class ItemsController < ApplicationController
     @item = Item.new(params[:item])
     
     if @item.save
-      redirect_to(items_url, :notice => t(:'notice.item.created', :name => @item.name))
+      redirect_to :back, :notice => t(:'notice.item.created', :name => @item.name) 
     else
-      render :items
+      flash[:item] = @item
+      redirect_to items_url(:anchor => "errorExplanation"), :alert => t(:'errors.models.created', :name => t(:'activerecord.models.item'))
     end
-
   end
 
   # PUT /items/1

@@ -141,7 +141,7 @@ tr:
       item: "Yemek"
     attributes:
       item:
-        name: "Adı"
+        name: "Yemek adı"
         details: "Detaylar"
         price: "Fiyat"
         active: "Aktif"
@@ -161,11 +161,20 @@ tr:
   hello: "Merhaba"
   menu: "Menü"
   todays_menu: "Günün Menüsü"
-  yesterdays_menu: "Dünün Menüsü"
-  tomorrows_menu: "Yarının Menüsü"
-
+  
   notice:
     item:
       created: "{{name}} eklendi"
       updated: "{{name}} güncellendi"
       deleted: "{{name}} silindi"
+      
+  errors:
+    template:
+      header: 
+        one: "Bir hata oldu"
+        other: "Birkaç hata oldu"
+      body: "Bu yüzden istediğini yapamadık"
+    models:
+      created: "{{name}} eklenemedi!"
+      updated: "{{name}} güncellenemedi!"
+      deleted: "{{name}} silinemedi!"
