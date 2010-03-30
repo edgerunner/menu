@@ -10,6 +10,4 @@ module ApplicationHelper
     end
     raw output
   end
-  
-  
 end

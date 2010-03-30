@@ -156,7 +156,7 @@ tr:
     submit:
       item:
         create: "Ekle bunu"
-
+        update: "Değiştir bunu"
 
   hello: "Merhaba"
   menu: "Menü"
@@ -178,3 +178,8 @@ tr:
       created: "{{name}} eklenemedi!"
       updated: "{{name}} güncellenemedi!"
       deleted: "{{name}} silinemedi!"
+  
+  admin:
+    button:
+      delete: "Sil"
+      edit: "Değiştir"

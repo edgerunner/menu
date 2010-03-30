@@ -2,4 +2,8 @@
   <dt><%= item.name %></dt>
   <dd><%= item.details %></dd>
   <dd><%= small_cents number_to_currency(item.price) %></dd>
+  <% if admin? %>
+    <%= link_to t(:'admin.button.delete'), item, :method => :delete -%><%= link_to t(:'admin.button.edit'), edit_item_path(item) -%>
+    
+  <% end -%>
 <% end -%>

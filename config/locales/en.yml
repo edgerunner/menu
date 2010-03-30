@@ -42,3 +42,8 @@ en:
       created: "{{name}} was NOT added!"
       updated: "{{name}} was NOT updated!"
       deleted: "{{name}} was NOT deleted!"
+      
+  admin:
+    button:
+      delete: "Delete"
+      edit: "Edit"

@@ -12,9 +12,9 @@ gem "rails", "3.0.0.beta"
 gem "sqlite3-ruby", :require => "sqlite3"
 gem "haml"
 
-group :production do
-  gem "pg"
-end
+#group :production do
+#  gem "pg"
+#end
 
 ## Bundle the gems you use:
 # gem "bj"

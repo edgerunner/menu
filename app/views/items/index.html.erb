@@ -5,8 +5,11 @@
 
 <div id="menu">
 	<% @items.each do |item| %>
-		<%= render item %>
+		<% if admin? && item == @form_item %>
+		  <%= render "form", :item => item %>
+		<% else %>
+		  <%= render item %>
+		<% end -%>
 	<% end -%>
 </div>
-	
-<%= render "form", :item => @new_item %>
+
