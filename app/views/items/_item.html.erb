@@ -4,6 +4,7 @@
   <dd><%= small_cents number_to_currency(item.price) %></dd>
   <% if admin? %>
     <%= link_to t(:'admin.button.delete'), item, :method => :delete -%><%= link_to t(:'admin.button.edit'), edit_item_path(item) -%>
-    
+    <%= link_to(raw('&uarr;'), item_move_path(item, :dir=>'up'), :method => :put  ) unless item.first? %>
+    <%= link_to(raw('&darr;'), item_move_path(item, :dir=>'down'), :method => :put) unless item.last? %>
   <% end -%>
 <% end -%>

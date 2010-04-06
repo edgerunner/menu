@@ -28,7 +28,14 @@ class ItemsController < ApplicationController
   
   def update
     @item = Item.find(params[:id])
-    @item.attributes = params[:item]
+    if params[:dir]
+      case params[:dir]
+      when 'up' then @item.move_higher
+      when 'down' then @item.move_lower
+      end
+    else
+      @item.attributes = params[:item]
+    end
     
     if @item.valid?
       @item.save!
@@ -38,7 +45,7 @@ class ItemsController < ApplicationController
       redirect_to items_url(:anchor => "errorExplanation"), :alert => t(:'errors.models.updated', :name => t(:'activerecord.models.item'))
     end
   end
-
+  
   def destroy
     @item = Item.find(params[:id])
     

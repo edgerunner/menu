@@ -1,5 +1,9 @@
 Menu::Application.routes.draw do |map|
-  resources :items
+  resources :items do
+    member do
+      put ":dir", :to => 'items#update', :as => :move, :constraints => { :dir => /up|down/ } 
+    end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
