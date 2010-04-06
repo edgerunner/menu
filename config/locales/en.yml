@@ -47,3 +47,5 @@ en:
     button:
       delete: "Delete"
       edit: "Edit"
+      up: "Up"
+      down: "Down"

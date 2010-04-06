@@ -183,3 +183,5 @@ tr:
     button:
       delete: "Sil"
       edit: "Değiştir"
+      up: "Yukarı"
+      down: "Aşağı"

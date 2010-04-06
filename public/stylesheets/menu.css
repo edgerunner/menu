@@ -161,32 +161,39 @@ address {
 	margin-top: 1em;
 }
 
-a[data-method=delete],
-a[href$=edit] {
+.admin a {
 	display:inline-block;
 	width:auto;
 	padding: 0.1em 1em;
 	margin: 0;
 	color: white;
 	text-decoration: none;
+	font-size: 70%;
 }
-a[data-method=delete] { 
-	background-color: #900;
-	border-top-left-radius:         .5em;
+
+.admin a:first-of-type {
+  border-top-left-radius:         .5em;
 	border-bottom-left-radius:      .5em;
 	-moz-border-radius-topleft:     .5em;
 	-moz-border-radius-bottomleft:  .5em;
 	-webkit-border-bottom-left-radius:.5em;
 	-webkit-border-top-left-radius: .5em;
 }
-a[href$=edit] { 
-	background-color: #940;
-	border-top-right-radius:         .5em;
+
+.admin a:last-of-type {
+  border-top-right-radius:         .5em;
 	border-bottom-right-radius:      .5em;
 	-moz-border-radius-topright:     .5em;
 	-moz-border-radius-bottomright:  .5em;
 	-webkit-border-bottom-right-radius:.5em;
 	-webkit-border-top-right-radius: .5em;
 }
+
+a[data-method=delete] { background-color: #900; }
+a[href$=edit] { background-color: #940; }
 a:hover[data-method=delete] { background-color: #C00;}
 a:hover[href$=edit] { background-color: #C60; }
+a[href$=up] { background-color: #814; }
+a:hover[href$=up] { background-color: #B16; }
+a[href$=down] { background-color: #904; }
+a:hover[href$=down] { background-color: #C06; }
