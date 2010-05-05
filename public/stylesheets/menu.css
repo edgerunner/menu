@@ -167,6 +167,14 @@ address {
 	position: absolute;
 	left: 100%;
 	top: .5em;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.admin:hover, *:hover > .admin {
+	visibility: visible;
+	opacity: 1;
+	-webkit-transition-duration: 0.5s;
 }
 
 .admin a {
@@ -197,11 +205,7 @@ address {
 	-webkit-border-bottom-left-radius: .5em;
 }
 
-a[data-method=delete] { background-color: #900; }
-a[href$=edit] { background-color: #940; }
-a:hover[data-method=delete] { background-color: #C00;}
-a:hover[href$=edit] { background-color: #C60; }
-a[href$=up] { background-color: #814; }
-a:hover[href$=up] { background-color: #B16; }
-a[href$=down] { background-color: #904; }
-a:hover[href$=down] { background-color: #C06; }
+a { background-color: #814; }
+a:hover { background-color: #B16; }
+a:nth-child(even) { background-color: #904; }
+a:nth-child(even):hover { background-color: #C06; }
