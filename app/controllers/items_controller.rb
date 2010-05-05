@@ -49,6 +49,12 @@ class ItemsController < ApplicationController
     end
   end
   
+  def renew
+    updater do
+      @item.active = true
+    end
+  end
+  
   def up
     updater do
       @item.move_higher

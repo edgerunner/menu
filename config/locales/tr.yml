@@ -186,3 +186,4 @@ tr:
       up: "Yukarı"
       down: "Aşağı"
       expire: "Bitti"
+      renew: "Çıktı"

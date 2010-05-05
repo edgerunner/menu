@@ -1,10 +1,11 @@
-<% content_tag_for :dl, item, :class => (item.active? ? "" : "inactive") do %>
+<%- content_tag_for :dl, item, :class => (item.active? ? "" : "inactive") do -%>
   <dt><%= item.name %></dt>
   <dd><%= item.details %></dd>
   <dd><%= small_cents number_to_currency(item.price) %></dd>
   <%- if admin? -%>
   <div class="admin">
 <%= link_to t(:'admin.button.expire'), expire_item_path(item), :method => :put if item.active? %>
+<%= link_to t(:'admin.button.renew'), renew_item_path(item), :method => :put unless item.active? %>
 <%= link_to t(:'admin.button.edit'), edit_item_path(item), :rel => 'nofollow' -%>
 <%= link_to t(:'admin.button.delete'), item, :method => :delete -%>
 <%= link_to(t(:'admin.button.up'), up_item_path(item), :method => :put ) unless item.first? -%>

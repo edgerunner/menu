@@ -1,8 +1,8 @@
 Menu::Application.routes.draw do |map|
   resources :items do
     member do
-      # put ":dir", :to => 'items#update', :as => :move, :constraints => { :dir => /up|down/ } 
       put :expire
+      put :renew
       put :up
       put :down  
     end
