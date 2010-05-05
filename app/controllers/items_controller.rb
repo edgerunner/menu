@@ -27,24 +27,11 @@ class ItemsController < ApplicationController
   end
   
   def update
-    @item = Item.find(params[:id])
-    if params[:dir]
-      case params[:dir]
-      when 'up' then @item.move_higher
-      when 'down' then @item.move_lower
-      end
-    else
+    updater do
       @item.attributes = params[:item]
     end
-    
-    if @item.valid?
-      @item.save!
-      redirect_to :back, :notice => t(:'notice.item.updated', :name => @item.name) 
-    else
-      flash[:item] = @item
-      redirect_to items_url(:anchor => "errorExplanation"), :alert => t(:'errors.models.updated', :name => t(:'activerecord.models.item'))
-    end
   end
+  
   
   def destroy
     @item = Item.find(params[:id])
@@ -55,4 +42,38 @@ class ItemsController < ApplicationController
       redirect_to items_url, :alert => t(:'errors.models.deleted', :name => t(:'activerecord.models.item'))
     end
   end
+  
+  def expire
+    updater do
+      @item.active = false
+    end
+  end
+  
+  def up
+    updater do
+      @item.move_higher
+    end
+  end
+  
+  def down
+    updater do
+      @item.move_lower
+    end
+  end
+  
+  private
+  
+  def updater
+    @item = Item.find(params[:id])
+    
+    yield
+    
+    if @item.save
+      redirect_to :back, :notice => t(:'notice.item.updated', :name => @item.name) 
+    else
+      flash[:item] = @item
+      redirect_to items_url(:anchor => "errorExplanation"), :alert => t(:'errors.models.updated', :name => @item.name)
+    end
+  end
+  
 end
