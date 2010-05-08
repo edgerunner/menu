@@ -1,7 +1,7 @@
 Menu::Application.routes.draw do |map|
   
-  constraints :host => /^menu\.(dev|gen\.tr)$/ do
-    defaults :host => "menu.dev" do
+  constraints :host => /^#{APP_CONFIG[:domain]}$/ do
+    defaults :host => APP_CONFIG[:domain] do
       post "/" => "restaurants#create", :as => :restaurants
       get "/" => "restaurants#new", :as => :restaurants
     end
