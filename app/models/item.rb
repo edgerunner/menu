@@ -1,9 +1,12 @@
 class Item < ActiveRecord::Base
-  acts_as_list
+  belongs_to :restaurant
+  acts_as_list :scope => :restaurant
   
   default_scope order('position')
-  scope :current, where("active = ?", true)
+  scope :active, where("active = ?", true)
+  scope :fresh, where("updated_at > ?", 1.day.ago)
   
-  validates_presence_of :name, :details, :price
+  validates_presence_of :name, :details, :price, :restaurant_id
+  validates_associated :restaurant, :on => :create
   validates_numericality_of :price
 end

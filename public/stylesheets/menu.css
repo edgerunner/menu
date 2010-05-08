@@ -20,6 +20,7 @@ body {
 	-webkit-border-radius: 2em;
 	width: 12em;
 	padding: 1em;
+	position:relative;
 }
 
 dl {
@@ -55,6 +56,7 @@ input {
 	width: 100%;
 }
 
+input[type=password],
 input[type=text] {
 	color: #163460;
 	background-color:transparent;
@@ -76,8 +78,7 @@ input:hover[type=submit] {
 	background-color: #163460;
 }
 
-form.edit_item input[type=submit], 
-form.new_item input[type=submit] {
+form input[type=submit] {
 	border-bottom-right-radius: 1em;
 	border-bottom-left-radius: 1em;
 	-moz-border-radius-bottomleft: 1em;
@@ -91,14 +92,15 @@ input[type=checkbox] {
 	width: auto;
 }
 
-form.edit_item, form.new_item {
+form {
 	margin-top: 1em;
 	position: relative;
 }
 
-form.edit_item:before, form.new_item:before {
+form:before {
 	display: block;
 	content: " ";
+	color: white;
 	background-color:#57A;
 	border-top-right-radius: 1em;
 	border-top-left-radius: 1em;
@@ -107,6 +109,26 @@ form.edit_item:before, form.new_item:before {
 	-webkit-border-top-right-radius: 1em;
 	-webkit-border-top-left-radius: 1em;
 	height: 1.3em; width: 100%;
+}
+
+form h1 {
+	color: white;
+	background-color:#57A;
+	font-size: inherit;
+	font-size: 135%;
+}
+
+p.side {
+	color: white;
+	background-color: #125;
+	font-size: %75;
+	padding: 0.6em;
+	border-radius: 1em;
+	-moz-border-radius: 1em;
+	-webkit-border-radius: 1em;
+	position: absolute;
+	left:14em; top: 1em;
+	width:12em;
 }
 
 p.alert, p.notice  { 

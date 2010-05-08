@@ -1,5 +1,13 @@
 Menu::Application.routes.draw do |map|
-  resources :items do
+  
+  constraints :host => /^menu\.(dev|gen\.tr)$/ do
+    defaults :host => "menu.dev" do
+      post "/" => "restaurants#create", :as => :restaurants
+      get "/" => "restaurants#new", :as => :restaurants
+    end
+  end
+  
+  resources :items, :except => [:new] do
     member do
       put :expire
       put :renew
@@ -7,7 +15,15 @@ Menu::Application.routes.draw do |map|
       put :down  
     end
   end
+  delete 'logout' => 'sessions#destroy', :as => :logout
+  get 'login' => 'sessions#new', :as => :login
+  post 'login' => 'sessions#create', :as => :login
+  root :to => "items#index"
 
+  
+
+  
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -57,7 +73,7 @@ Menu::Application.routes.draw do |map|
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => "items#index"
+  
 
   # See how all your routes lay out with "rake routes"
 

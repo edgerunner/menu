@@ -2,7 +2,7 @@
 source 'http://gemcutter.org'
 
 
-gem "rails", "3.0.0.beta"
+gem "rails", "3.0.0.beta3"
 
 ## Bundle edge rails:
 # gem "rails", :git => "git://github.com/rails/rails.git"
@@ -11,6 +11,10 @@ gem "rails", "3.0.0.beta"
 # Rails has selected sqlite3.
 gem "sqlite3-ruby", :require => "sqlite3"
 gem "haml"
+
+group :development do
+  gem "nifty-generators"
+end
 
 #group :production do
 #  gem "pg"

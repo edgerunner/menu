@@ -9,16 +9,30 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100328232331) do
+ActiveRecord::Schema.define(:version => 20100507215837) do
 
   create_table "items", :force => true do |t|
     t.string   "name"
     t.string   "details"
     t.decimal  "price"
     t.integer  "position"
-    t.boolean  "active",     :default => true
+    t.boolean  "active",        :default => true
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "restaurant_id"
+  end
+
+  create_table "restaurants", :force => true do |t|
+    t.string   "domain"
+    t.string   "email"
+    t.string   "password_hash"
+    t.string   "password_salt"
+    t.string   "name"
+    t.string   "info"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "restaurants", ["domain"], :name => "index_restaurants_on_domain", :unique => true
 
 end

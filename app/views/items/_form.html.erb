@@ -1,6 +1,7 @@
-<% form_for(item) do |f| %>
+<%= form_for(item) do |f| %>
+<h1><%= item.name || t(:new_item) %></h1>
 <%= f.error_messages %>
-
+<%= f.hidden_field :restaurant_id %>
 <dl>
   <dt>
     <%= f.label :name %><br />

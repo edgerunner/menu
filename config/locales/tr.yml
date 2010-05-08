@@ -139,12 +139,20 @@ tr:
         record_invalid: "Doğrulama başarısız oldu: {{errors}}"
     models:
       item: "Yemek"
+      restaurant: "Restoran"
     attributes:
       item:
         name: "Yemek adı"
         details: "Detaylar"
         price: "Fiyat"
         active: "Aktif"
+      restaurant:
+        name: "Restoran adı"
+        domain: "Alan adı"
+        email: "e-posta adresi"
+        password: "Şifre"
+        password_confirmation: "Şifre onayı"
+        info: "Ek bilgiler"
       
   helpers:
     label:
@@ -153,14 +161,26 @@ tr:
         details: "Yanında ne var?"
         price: "Kaç lira?"
         active: "Şu anda var mı bundan?"
+      restaurant:
+        name: "Restoranın adı ne?"
+        domain: "Kullanmak istediğin alan adı nedir?"
+        email: "İletişim için bir e-posta adresi lütfen"
+        password: "Şifre ne olsun?"
+        password_confirmation: "Şifreyi bir daha alalım, emin olalım."
+        info: "Ek bilgi olarak ne gösterelim? Adres, telefon vs?"
     submit:
       item:
         create: "Ekle bunu"
         update: "Değiştir bunu"
+      restaurant:
+        create: "Açalım bu hesabı"
+        
 
   hello: "Merhaba"
   menu: "Menü"
   todays_menu: "Günün Menüsü"
+  new_restaurant: "Yeni restoran"
+  new_item: "Yeni yemek"
   
   notice:
     item:
