@@ -217,5 +217,7 @@ tr:
       down: "Aşağı"
       expire: "Bitti"
       renew: "Çıktı"
+      login: "Patron girişi"
       logout: "Çıkış yapalım"
+      cancel_login: "Ben patron değilim"
       

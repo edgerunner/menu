@@ -1,3 +1,6 @@
+<h3><%= @restaurant.name %></h3>
+
+<%= flash_paragraphs %>
 
 <%= form_tag login_path, :method => :post do %>
   <h1><%= t :admin_login %></h1>
@@ -5,3 +8,5 @@
   <%= password_field_tag :password %>
   <%= submit_tag t('helpers.submit.login') %>
 <% end -%>
+
+<p><%= link_to t('admin.button.cancel_login'), root_path, :class => "admin" %></p>

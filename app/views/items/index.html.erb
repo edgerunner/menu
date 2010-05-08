@@ -1,3 +1,4 @@
+
 <h3><%= @restaurant.name %></h3>
 
 <h1 id="title"><%= t(:todays_menu) %></h1>
@@ -17,8 +18,10 @@
 
 <address><%= @restaurant.info %></address>
 
-<% if admin? %>
-  <%= link_to t(:'admin.button.logout'), logout_path, :method => :delete, :class=>'admin' %>
-<% else %>
-  <%= render 'login' %>
-<% end -%>
+<p>
+    <% if admin? %>
+      <%= link_to t(:'admin.button.logout'), logout_path, :method => :delete, :class=>'admin' %>
+    <% else %>
+      <%= link_to t(:'admin.button.login'), login_path, :class=>'admin' %>
+    <% end -%>
+</p>
