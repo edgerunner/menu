@@ -1,22 +1,17 @@
 class SessionsController < ApplicationController
-  def new
-  end
+  before_filter :set_restaurant
   
   def create
-    restaurant = Restaurant.authenticate(params[:login], params[:password])
-    if restaurant
-      session[:restaurant_id] = restaurant.id
-      flash[:notice] = "Logged in successfully."
-      redirect_to_target_or_default("/")
+    if @restaurant.matching_password? params[:password]
+      session[:restaurant_id] = @restaurant.id
+      redirect_to root_url, :notice => t('notice.session.created')
     else
-      flash.now[:error] = "Invalid login or password."
-      render :action => 'new'
+      redirect_to root_url, :alert => t('errors.session.wrong_password')
     end
   end
   
   def destroy
     session[:restaurant_id] = nil
-    flash[:notice] = "You have been logged out."
-    redirect_to "/"
+    redirect_to root_url, :notice => t('notice.session.deleted')
   end
 end

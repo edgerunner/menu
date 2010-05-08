@@ -1,0 +1,7 @@
+
+<%= form_tag login_path, :method => :post do %>
+  <h1><%= t :admin_login %></h1>
+  <%= label_tag :password, t('helpers.label.password')%>
+  <%= password_field_tag :password %>
+  <%= submit_tag t('helpers.submit.login') %>
+<% end -%>

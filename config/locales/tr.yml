@@ -168,12 +168,14 @@ tr:
         password: "Şifre ne olsun?"
         password_confirmation: "Şifreyi bir daha alalım, emin olalım."
         info: "Ek bilgi olarak ne gösterelim? Adres, telefon vs?"
+      password: "Şifre nedir?"
     submit:
       item:
         create: "Ekle bunu"
         update: "Değiştir bunu"
       restaurant:
         create: "Açalım bu hesabı"
+      login: "Giriş yap"
         
 
   hello: "Merhaba"
@@ -181,12 +183,18 @@ tr:
   todays_menu: "Günün Menüsü"
   new_restaurant: "Yeni restoran"
   new_item: "Yeni yemek"
+  admin_login: "Patron girişi"
   
   notice:
     item:
       created: "{{name}} eklendi"
       updated: "{{name}} güncellendi"
       deleted: "{{name}} silindi"
+    restaurant:
+      created: "Restoranın hazır"
+    session:
+      created: "Hoşgeldin patron"
+      deleted: "Güle güle"
       
   errors:
     template:
@@ -198,6 +206,8 @@ tr:
       created: "{{name}} eklenemedi!"
       updated: "{{name}} güncellenemedi!"
       deleted: "{{name}} silinemedi!"
+    session:
+      wrong_password: "Olmadı, şifre yanlış."
   
   admin:
     button:
@@ -207,3 +217,5 @@ tr:
       down: "Aşağı"
       expire: "Bitti"
       renew: "Çıktı"
+      logout: "Çıkış yapalım"
+      

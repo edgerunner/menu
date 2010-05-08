@@ -184,7 +184,7 @@ address {
 	margin-top: 1em;
 }
 
-.admin {
+div.admin {
 	width: 3em;
 	position: absolute;
 	left: 100%;
@@ -193,7 +193,7 @@ address {
 	opacity: 0;
 }
 
-.admin:hover, *:hover > .admin {
+div.admin:hover, *:hover > div.admin {
 	visibility: visible;
 	opacity: 1;
 	-webkit-transition-duration: 0.5s;
@@ -202,14 +202,11 @@ address {
 .admin a {
 	display: block;
 	width:100%;
-	padding: 0.1em 1em;
-	margin: 0;
-	color: white;
-	text-decoration: none;
+	
 	font-size: 70%;
 }
 
-.admin a:first-of-type {
+a:first-of-type {
   border-top-left-radius:         .5em;
 	border-top-right-radius:        .5em;
 	-moz-border-radius-topleft:     .5em;
@@ -218,7 +215,7 @@ address {
 	-webkit-border-top-left-radius: .5em;
 }
 
-.admin a:last-of-type {
+a:last-of-type {
   border-bottom-left-radius:         .5em;
 	border-bottom-right-radius:        .5em;
 	-moz-border-radius-bottomleft:     .5em;
@@ -227,7 +224,13 @@ address {
 	-webkit-border-bottom-left-radius: .5em;
 }
 
-a { background-color: #814; }
+a { 
+	background-color: #814; 
+	padding: 0.1em 1em;
+	margin: 0;
+	color: white;
+	text-decoration: none;
+	}
 a:hover { background-color: #B16; }
 a:nth-child(even) { background-color: #904; }
 a:nth-child(even):hover { background-color: #C06; }

@@ -1,3 +1,5 @@
+<h3><%= @restaurant.name %></h3>
+
 <h1 id="title"><%= t(:todays_menu) %></h1>
 <p id="date"><%= l @date, :format => :close %></p>
 
@@ -5,7 +7,7 @@
 
 <div id="menu">
 	<% @items.each do |item| %>
-		<% if admin? && item == @form_item %>
+		<% if admin? && (item == @form_item) %>
 		  <%= render "form", :item => item %>
 		<% else %>
 		  <%= render item %>
@@ -13,3 +15,10 @@
 	<% end -%>
 </div>
 
+<address><%= @restaurant.info %></address>
+
+<% if admin? %>
+  <%= link_to t(:'admin.button.logout'), logout_path, :method => :delete, :class=>'admin' %>
+<% else %>
+  <%= render 'login' %>
+<% end -%>

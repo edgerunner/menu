@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   private
   
   def admin?
-    true
+    @restaurant and session[:restaurant_id] == @restaurant.id
   end
   
   def set_restaurant
@@ -15,15 +15,8 @@ class ApplicationController < ActionController::Base
     
     unless @restaurant
       flash[:restaurant] = Restaurant.new({:domain => request.host})
-      redirect_to restaurants_url
+      redirect_to restaurants_url(:port => request.port)
     end
   end
   
-#  def default_url_options
-#    options = self.class.default_url_options
-#    if options[:host] =~ /\.dev$/ then
-#      options[:port] = 3000 
-#    end
-#    options
-#  end
 end
