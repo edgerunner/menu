@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
   before_filter :set_restaurant
+  before_filter :check_for_admin, :except => :index
   
   def index
     @date = Date.today

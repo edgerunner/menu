@@ -8,6 +8,7 @@ class Restaurant < ActiveRecord::Base
   validates_presence_of :domain, :name
   validates_uniqueness_of :domain
   validates_format_of :domain, :with => /^[a-z][a-z0-9-]+(\.[a-z][a-z0-9-]+)+$/i
+  validates_exclusion_of :domain, :in => [APP_CONFIG[:domain]]
   validates_format_of :email, :with => /^[-a-z0-9_+\.]+\@([-a-z0-9]+\.)+[a-z0-9]{2,4}$/i
   validates_presence_of :password, :on => :create
   validates_confirmation_of :password

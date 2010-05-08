@@ -208,6 +208,9 @@ tr:
       deleted: "{{name}} silinemedi!"
     session:
       wrong_password: "Olmadı, şifre yanlış."
+    app:
+      denied: "Oraya girilmez birader"
+      no_restaurant: "Yok böyle bir restoran"
   
   admin:
     button:
