@@ -1,8 +1,18 @@
 development:
   domain: menu.dev
+  reserved_domains:
+    - menu.dev
+    - blog.menu.dev
+    - www.menu.dev
+    - menu.menu.dev
 
 test:
   domain: test.host
 
 production:
   domain: menu.gen.tr
+  reserved_domains:
+    - menu.gen.tr
+    - blog.menu.gen.tr
+    - www.menu.gen.tr
+    - menu.menu.gen.tr
