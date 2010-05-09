@@ -9,17 +9,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100507215837) do
+ActiveRecord::Schema.define(:version => 20100509103508) do
 
   create_table "items", :force => true do |t|
     t.string   "name"
     t.string   "details"
     t.decimal  "price"
     t.integer  "position"
-    t.boolean  "active",        :default => true
+    t.boolean  "active",                       :default => true
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "restaurant_id"
+    t.integer  "restaurant_id", :limit => 255
   end
 
   create_table "restaurants", :force => true do |t|
