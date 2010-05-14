@@ -1,7 +1,7 @@
 
 <h3><%= @restaurant.name %></h3>
 
-<%= render "notice" %>
+<%= render "notice" if admin? %>
 
 <h1 id="title"><%= t(:todays_menu) %></h1>
 <p id="date"><%= l @date, :format => :close %></p>
