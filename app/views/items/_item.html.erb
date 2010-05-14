@@ -1,6 +1,6 @@
 <%- content_tag_for :dl, item, :class => (item.active? ? "" : "inactive") do -%>
   <dt><%= item.name %></dt>
-  <dd><%= item.details %></dd>
+  <%= content_tag :dd, item.details unless item.details.blank? %>
   <dd><%= small_cents number_to_currency(item.price) %></dd>
   <%- if admin? -%>
   <div class="admin">

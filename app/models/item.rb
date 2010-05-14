@@ -6,7 +6,7 @@ class Item < ActiveRecord::Base
   scope :active, where("active = ?", true)
   scope :fresh, where("updated_at > ?", 1.day.ago)
   
-  validates_presence_of :name, :details, :price, :restaurant_id
+  validates_presence_of :name, :price, :restaurant_id
   validates_associated :restaurant, :on => :create
   validates_numericality_of :price
 end
