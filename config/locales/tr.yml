@@ -210,7 +210,7 @@ tr:
       wrong_password: "Olmadı, şifre yanlış."
     app:
       denied: "Oraya girilmez birader"
-      no_restaurant: "Yok böyle bir restoran"
+      no_restaurant: "Bu alan adına kayıtlı bir restoran bulamadık. Dilerseniz bu alan adıyla yeni bir restoran oluşturabilirsiniz."
   
   admin:
     button:
