@@ -2,29 +2,4 @@
 
 <%= flash_paragraphs %>
 
-<%= form_for @restaurant do |f| %>
-  <h1><%= t :new_restaurant %></h1>
-  <%= f.error_messages %>
-  <p>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :domain %><br />
-    <%= f.text_field :domain %>
-  </p>
-  <p>
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </p>
-  <p>
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
-  </p>
-  <p>
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation %>
-  </p>
-  
-  <p><%= f.submit %></p>
-<% end %>
+<%= render 'form' %>

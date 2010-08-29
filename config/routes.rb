@@ -15,6 +15,10 @@ Menu::Application.routes.draw do |map|
       put :down  
     end
   end
+  
+  get 'settings' => 'restaurants#edit', :as => :settings
+  put 'settings' => 'restaurants#update', :as => :restaurant
+  
   delete 'logout' => 'sessions#destroy', :as => :logout
   get  'login' => 'sessions#new', :as => :login
   post 'login' => 'sessions#create', :as => :login

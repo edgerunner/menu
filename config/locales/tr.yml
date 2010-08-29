@@ -175,6 +175,7 @@ tr:
         update: "Değiştir bunu"
       restaurant:
         create: "Açalım bu hesabı"
+        update: "Değiştirelim ayarları"
       login: "Giriş yap"
         
 
@@ -184,6 +185,7 @@ tr:
   new_restaurant: "Yeni restoran"
   new_item: "Yeni yemek"
   admin_login: "Patron girişi"
+  settings: "Ayarlar"
   
   notice:
     item:
@@ -192,6 +194,7 @@ tr:
       deleted: "{{name}} silindi"
     restaurant:
       created: "Restoranın hazır"
+      updated: "Ayarlar değişti"
     session:
       created: "Hoşgeldin patron"
       deleted: "Güle güle"
@@ -221,6 +224,8 @@ tr:
       expire: "Bitti"
       renew: "Çıktı"
       login: "Patron girişi"
-      logout: "Çıkış yapalım"
+      logout: "Çıkış"
       cancel_login: "Ben patron değilim"
+      settings: "Ayarlar"
+      cancel_settings: "Vazgeçtim, değiştirmeyelim"
       
