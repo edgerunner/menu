@@ -17,6 +17,7 @@ Menu::Application.configure do
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = false
   
-  config.action_controller.default_port = 3000
-  config.action_controller.default_host = 'menu.dev'
+  #config.action_controller.default_url_options = {:port => 3000}
+  
+  config.active_support.deprecation = :log
 end

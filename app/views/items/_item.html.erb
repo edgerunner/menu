@@ -1,4 +1,4 @@
-<%- content_tag_for :dl, item, :class => (item.active? ? "" : "inactive") do -%>
+<%= content_tag_for :dl, item, :class => (item.active? ? "" : "inactive") do -%>
   <dt><%= item.name %></dt>
   <%= content_tag :dd, item.details unless item.details.blank? %>
   <dd><%= small_cents number_to_currency(item.price) %></dd>
