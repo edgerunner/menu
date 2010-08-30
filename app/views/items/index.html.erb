@@ -17,7 +17,7 @@
 		  <%= render item %>
 		<% end -%>
 	<% end -%>
-	<%= render "form", :item => @form_item unless @form_rendered %>
+	<%= render "form", :item => @form_item if admin? unless @form_rendered %>
 </div>
 
 
