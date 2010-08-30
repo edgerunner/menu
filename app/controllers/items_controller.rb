@@ -5,11 +5,10 @@ class ItemsController < ApplicationController
   def index
     @date = Date.today
 
-    @items = @restaurant.items
+    @items = @restaurant.items.all
     
-    if admin? and 
-      @form_item = flash.has_key?(:item) ? flash[:item] : @restaurant.items.build
-      @items << @form_item unless @items.include?(@form_item)
+    if admin?
+      @form_item = flash[:item] || @restaurant.items.build
     end
   end
   
@@ -43,10 +42,10 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
     
     if @item.destroy
-      notice = t(:'notice.item.deleted', :name => @item.name)
+      flash.notice = t(:'notice.item.deleted', :name => @item.name)
       redirect_to :back 
     else
-      alert = t(:'errors.models.deleted', :name => t(:'activerecord.models.item'))
+      flash.alert = t(:'errors.models.deleted', :name => t(:'activerecord.models.item'))
       redirect_to root_url
     end
   end
@@ -84,10 +83,10 @@ class ItemsController < ApplicationController
     
     if @item.valid?
       @item.save!
-      notice = t(:'notice.item.updated', :name => @item.name)
+      flash.notice = t(:'notice.item.updated', :name => @item.name)
       redirect_to :back
     else
-      alert = t(:'errors.models.updated', :name => @item.name)
+      flash.alert = t(:'errors.models.updated', :name => @item.name)
       flash[:item] = @item
       redirect_to root_url(:anchor => "errorExplanation")
     end

@@ -9,12 +9,15 @@
 
 <div id="menu">
 	<% @items.each do |item| %>
-		<% if admin? && (item.id == @form_item.id) %>
+		<% if admin? && (item == @form_item) %>
+		  <% @form_rendered = true %>
 		  <%= render "form", :item => @form_item %>
+		  <p class="admin"><%= link_to t(:'admin.button.cancel'), root_path %></p>
 		<% else %>
 		  <%= render item %>
 		<% end -%>
 	<% end -%>
+	<%= render "form", :item => @form_item unless @form_rendered %>
 </div>
 
 
