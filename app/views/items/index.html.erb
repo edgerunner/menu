@@ -12,7 +12,7 @@
 		<% if admin? && (item == @form_item) %>
 		  <% @form_rendered = true %>
 		  <%= render "form", :item => @form_item %>
-		  <p class="admin"><%= link_to t(:'admin.button.cancel'), root_path %></p>
+		  <p class="admin"><%= link_to t(:'admin.button.cancel_edit'), root_path %></p>
 		<% else %>
 		  <%= render item %>
 		<% end -%>

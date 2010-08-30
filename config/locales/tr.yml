@@ -228,4 +228,5 @@ tr:
       cancel_login: "Ben patron değilim"
       settings: "Ayarlar"
       cancel_settings: "Vazgeçtim, değiştirmeyelim"
+      cancel_edit: "Boşver"
       
