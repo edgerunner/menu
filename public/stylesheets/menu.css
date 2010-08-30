@@ -193,9 +193,8 @@ date {
 	-webkit-border-top-right-radius:.5em;
 	-webkit-border-top-left-radius: .5em;
 }
-.fieldWithErrors { display:inline; }
-.fieldWithErrors label{ color: #A00; }
-
+.field_with_errors { display:inline; }
+.field_with_errors label{ color: #A00; }
 
 div.admin {
 
