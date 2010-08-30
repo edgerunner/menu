@@ -15,6 +15,7 @@ Menu::Application.routes.draw do |map|
       put :down  
     end
   end
+  delete 'items' => 'items#destroy_all'
   
   get 'settings' => 'restaurants#edit', :as => :settings
   put 'settings' => 'restaurants#update', :as => :restaurant

@@ -24,8 +24,9 @@
 
 <p class='admin'>
     <% if admin? %>
-      <%= link_to t(:'admin.button.logout'), logout_path, :method => :delete %>
+      <%= link_to t(:'admin.button.delete_all'), items_path, :method => :delete, :confirm => t(:'admin.confirm.delete_all') -%>
       <%= link_to t(:'admin.button.settings'), settings_path %>
+      <%= link_to t(:'admin.button.logout'), logout_path, :method => :delete %>
     <% else %>
       <%= link_to t(:'admin.button.login'), login_path %>
     <% end -%>

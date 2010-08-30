@@ -45,11 +45,20 @@ class ItemsController < ApplicationController
       flash.notice = t(:'notice.item.deleted', :name => @item.name)
       redirect_to :back 
     else
-      flash.alert = t(:'errors.models.deleted', :name => t(:'activerecord.models.item'))
+      flash.alert = t(:'errors.models.deleted', :name => @item.name)
       redirect_to root_url
     end
   end
   
+  def destroy_all
+    if @restaurant.items.destroy_all.length > 0
+      flash.notice = t(:'notice.item.deleted_all')
+    else
+      flash.alert = t(:'errors.models.deleted_all')
+    end
+    redirect_to root_url
+  end
+      
   def expire
     updater do
       @item.active = false

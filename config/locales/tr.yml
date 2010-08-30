@@ -192,6 +192,7 @@ tr:
       created: "{{name}} eklendi"
       updated: "{{name}} güncellendi"
       deleted: "{{name}} silindi"
+      deleted_all: "Tüm yemekler silindi"
     restaurant:
       created: "Restoranın hazır"
       updated: "Ayarlar değişti"
@@ -209,6 +210,7 @@ tr:
       created: "{{name}} eklenemedi!"
       updated: "{{name}} güncellenemedi!"
       deleted: "{{name}} silinemedi!"
+      deleted_all: "Hiç bir şey silinmedi!"
     session:
       wrong_password: "Olmadı, şifre yanlış."
     app:
@@ -218,6 +220,7 @@ tr:
   admin:
     button:
       delete: "Sil"
+      delete_all: "Tümünü sil"
       edit: "Değiştir"
       up: "Yukarı"
       down: "Aşağı"
@@ -229,4 +232,6 @@ tr:
       settings: "Ayarlar"
       cancel_settings: "Vazgeçtim, değiştirmeyelim"
       cancel_edit: "Boşver"
-      
+    
+    confirm:
+      delete_all: "Tüm yemekleri silmek istediğinden emin misin?"
