@@ -9,7 +9,6 @@
   </head>
   <body>
     <h3><%= t(:todays_menu) %></h3>
-    <%= render "layouts/notice" if admin? %>
     <h1 id="title"><%= @restaurant.name %></h1>
     <%= yield %>
   </body>
