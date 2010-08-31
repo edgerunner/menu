@@ -5,10 +5,12 @@
     <%= f.label :name %>
     <%= f.text_field :name %>
   </p>
+  <% if @restaurant.new_record? %>
   <p>
     <%= f.label :domain %><br />
     <%= f.text_field :domain %>
   </p>
+  <%- end -%>
   <p>
     <%= f.label :info %><br />
     <%= f.text_field :info %>
