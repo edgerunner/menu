@@ -127,7 +127,7 @@ p {
 	margin: .5em 0;
 }
 
-div.side {
+div.side, label.side {
 	color: white;
 	background-color: rgba(17,34,51,0.4);
 	font-size: %75;
@@ -140,6 +140,21 @@ div.side {
 	width:12em;
 	text-align:left;
 }
+
+label.side {
+  display: block;
+  visibility: hidden;
+  right: auto; left: 12em; top: auto;
+  background-color: #57a;
+  box-shadow: 0 0 1em #124;
+	-moz-box-shadow: 0 0 1em #124;
+	-webkit-box-shadow: 0 0 1em #124;
+}
+
+input:focus + label.side {
+  visibility: visible;
+}
+
 
 p.alert, p.notice  { 
 	color: white;
