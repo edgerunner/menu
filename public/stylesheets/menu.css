@@ -1,8 +1,8 @@
 @import url("fonts/fonts.css");
 
 * {
-	font-family: "JottFLF", sans-serif;
-	text-align: center;
+	font-family: inherit;
+	text-align: inherit;
 	margin:0;
 }
 
@@ -24,6 +24,8 @@ body {
 	box-shadow: 0 0 1em #124;
 	-moz-box-shadow: 0 0 1em #124;
 	-webkit-box-shadow: 0 0 1em #124;
+	text-align: center;
+	font-family: "JottFLF", sans-serif;
 }
 
 dl {
@@ -125,17 +127,18 @@ p {
 	margin: .5em 0;
 }
 
-p.side {
+div.side {
 	color: white;
 	background-color: rgba(17,34,51,0.4);
 	font-size: %75;
-	padding: 0.6em;
+	padding: 0.6em 1em;
 	border-radius: .5em;
 	-moz-border-radius: .5em;
 	-webkit-border-radius: .5em;
 	position: absolute;
 	right:15em; top: 1em;
 	width:12em;
+	text-align:left;
 }
 
 p.alert, p.notice  { 
@@ -258,3 +261,6 @@ a {
 a:hover { background-color: #B16; }
 a:nth-child(even) { background-color: #904; }
 a:nth-child(even):hover { background-color: #C06; }
+
+ul {padding-left: 1em;}
+h1 {line-height: 1em;}
