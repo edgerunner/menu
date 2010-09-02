@@ -134,10 +134,12 @@ label.side {
   box-shadow: 0 0 1em #124;
 }
 
-input:focus + label.side {
-  visibility: visible;
+div.side {
+  box-shadow: 0 0 1em #124 inset;
 }
 
+input:focus + label.side { visibility: visible; }
+.field_with_errors:focus + label.side
 
 p.alert, p.notice  { 
 	color: white;
