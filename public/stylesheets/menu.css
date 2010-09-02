@@ -16,14 +16,10 @@ body {
 	background-color: white;
 	background: white url('../images/white-bg.png') repeat-x;
 	border-radius: 1em;
-	-moz-border-radius: 1em;
-	-webkit-border-radius: 1em;
 	width: 12em;
 	padding: 1em;
 	position:relative;
 	box-shadow: 0 0 1em #124;
-	-moz-box-shadow: 0 0 1em #124;
-	-webkit-box-shadow: 0 0 1em #124;
 	text-align: center;
 	font-family: "JottFLF", sans-serif;
 }
@@ -86,10 +82,6 @@ input:hover[type=submit] {
 form input[type=submit] {
 	border-bottom-right-radius: .5em;
 	border-bottom-left-radius: .5em;
-	-moz-border-radius-bottomleft: .5em;
-	-moz-border-radius-bottomright: .5em;
-	-webkit-border-bottom-right-radius: .5em;
-	-webkit-border-bottom-left-radius: .5em;
 }
 
 input[type=checkbox] {
@@ -100,27 +92,22 @@ input[type=checkbox] {
 form {
 	margin-top: 1em;
 	position: relative;
-}
-
-form:before {
-	display: block;
-	content: " ";
-	color: white;
-	background-color:#57A;
-	border-top-right-radius: .5em;
-	border-top-left-radius: .5em;
-	-moz-border-radius-topleft: .5em;
-	-moz-border-radius-topright: .5em;
-	-webkit-border-top-right-radius: .5em;
-	-webkit-border-top-left-radius: .5em;
-	height: 1.3em; width: 100%;
+	
 }
 
 form h1 {
+	display: block;
 	color: white;
 	background-color:#57A;
+	
+	border-top-right-radius: .5em;
+	border-top-left-radius: .5em;
+
 	font-size: inherit;
 	font-size: 135%;
+	
+	padding-top: .5em;
+	padding-bottom: .2em;
 }
 
 p {
@@ -133,8 +120,6 @@ div.side, label.side {
 	font-size: %75;
 	padding: 0.6em 1em;
 	border-radius: .5em;
-	-moz-border-radius: .5em;
-	-webkit-border-radius: .5em;
 	position: absolute;
 	right:15em; top: 1em;
 	width:12em;
@@ -147,8 +132,6 @@ label.side {
   right: auto; left: 12em; top: auto;
   background-color: #57a;
   box-shadow: 0 0 1em #124;
-	-moz-box-shadow: 0 0 1em #124;
-	-webkit-box-shadow: 0 0 1em #124;
 }
 
 input:focus + label.side {
@@ -159,8 +142,6 @@ input:focus + label.side {
 p.alert, p.notice  { 
 	color: white;
 	border-radius: .5em;
-	-moz-border-radius: .5em;
-	-webkit-border-radius: .5em;
 	padding: 0.2em;
 }
 p.notice { 	background-color:#0A0; }
@@ -178,14 +159,10 @@ date {
 	font-size: %80;
 	padding: 0.3em;
 	border-radius: 1em;
-	-moz-border-radius: 1em;
-	-webkit-border-radius: 1em;
 	position: absolute;
 	left:14em; top: 1em;
 	width:12em;
 	box-shadow: 0 0 1em #124;
-	-moz-box-shadow: 0 0 1em #124;
-	-webkit-box-shadow: 0 0 1em #124;
 }
 #errorExplanation ul { padding:0; margin:0; }
 #errorExplanation li {
@@ -198,18 +175,10 @@ date {
 #errorExplanation li:last-child {
 	border-bottom-left-radius:         .5em;
 	border-bottom-right-radius:        .5em;
-	-moz-border-radius-bottomleft:     .5em;
-	-moz-border-radius-bottomright:    .5em;
-	-webkit-border-bottom-right-radius:.5em;
-	-webkit-border-bottom-left-radius: .5em;
 }
 #errorExplanation li:first-child {
 	border-top-left-radius:         .5em;
 	border-top-right-radius:        .5em;
-	-moz-border-radius-topleft:     .5em;
-	-moz-border-radius-topright:    .5em;
-	-webkit-border-top-right-radius:.5em;
-	-webkit-border-top-left-radius: .5em;
 }
 .field_with_errors { display:inline; }
 .field_with_errors label{ color: #A00; }
@@ -223,12 +192,8 @@ div.admin {
 	opacity: 0;
 	
 	border-radius:         .5em;
-	-moz-border-radius:    .5em;
-	-webkit-border-radius: .5em;
 	
 	box-shadow:         0 0 1em #124;
-	-moz-box-shadow:    0 0 1em #124;
-	-webkit-box-shadow: 0 0 1em #124;
 }
 
 div.admin:hover, *:hover > div.admin {
@@ -245,25 +210,15 @@ div.admin:hover, *:hover > div.admin {
 .admin a:first-of-type {
   border-top-left-radius:         .5em;
 	border-top-right-radius:        .5em;
-	-moz-border-radius-topleft:     .5em;
-	-moz-border-radius-topright:    .5em;
-	-webkit-border-top-right-radius:.5em;
-	-webkit-border-top-left-radius: .5em;
 }
 
 .admin a:last-of-type {
   border-bottom-left-radius:         .5em;
 	border-bottom-right-radius:        .5em;
-	-moz-border-radius-bottomleft:     .5em;
-	-moz-border-radius-bottomright:    .5em;
-	-webkit-border-bottom-right-radius:.5em;
-	-webkit-border-bottom-left-radius: .5em;
 }
 
 a.admin {
 	border-radius:        .5em;
-	-moz-border-radius:   .5em;
-	-webkit-border-radius:.5em;
 }
 
 a { 
