@@ -1,3 +1,5 @@
+require 'heroku'
+
 class Restaurant < ActiveRecord::Base
   # new columns need to be added here to be writable through mass assignment
   attr_accessible :domain, :email, :password, :password_confirmation, :name, :info
@@ -5,6 +7,11 @@ class Restaurant < ActiveRecord::Base
   
   attr_accessor :password
   before_save :prepare_password
+  
+  if Rails.env.production?
+    before_create :register_domain
+    before_destroy :unregister_domain
+  end
   
   validates_presence_of :domain, :name
   validates_uniqueness_of :domain
@@ -32,6 +39,16 @@ class Restaurant < ActiveRecord::Base
   
   def encrypt_password(pass)
     Digest::SHA1.hexdigest([pass, password_salt].join)
+  end
+  
+  def register_domain
+    Heroku::Client.new(ENV['HEROKU_USER'], ENV['HEROKU_PASSWORD']).add_domain('menu', domain)
+  rescue RestClient::RequestFailed
+    errors.add :domain, :not_yet_routed
+    false
+  end
+  def unregister_domain
+    Heroku::Client.new(ENV['HEROKU_USER'], ENV['HEROKU_PASSWORD']).remove_domain('menu', domain)
   end
   
 end

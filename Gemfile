@@ -3,6 +3,7 @@ source 'http://gemcutter.org'
 
 
 gem "rails", "3.0.0"
+gem 'heroku'
 
 ## Bundle edge rails:
 # gem "rails", :git => "git://github.com/rails/rails.git"

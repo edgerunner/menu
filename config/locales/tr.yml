@@ -137,6 +137,7 @@ tr:
         odd: "tek olmalı"
         even: "çift olmalı"
         record_invalid: "Doğrulama başarısız oldu: {{errors}}"
+        not_yet_routed: "henüz doğru biçimde yönlendirilmemiş"
     models:
       item: "Yemek"
       restaurant: "Restoran"
