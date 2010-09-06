@@ -15,11 +15,19 @@ body {
 	margin: 1em auto;
 	background-color: white;
 	background: white url('../images/white-bg.png') repeat-x;
+	
 	border-radius: 1em;
+	-moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+	
 	width: 12em;
 	padding: 1em;
 	position:relative;
+	
 	box-shadow: 0 0 1em #124;
+	-moz-box-shadow: 0 0 1em #124;
+	-webkit-box-shadow: 0 0 1em #124;
+	
 	text-align: center;
 	font-family: "JottFLF", sans-serif;
 }
@@ -119,7 +127,11 @@ div.side, label.side {
 	background-color: rgba(17,34,51,0.4);
 	font-size: %75;
 	padding: 0.6em 1em;
+	
 	border-radius: .5em;
+	-moz-border-radius: .5em;
+  -webkit-border-radius: .5em;
+  
 	position: absolute;
 	right:15em; top: 1em;
 	width:12em;
@@ -131,15 +143,22 @@ label.side {
   visibility: hidden;
   right: auto; left: 12em; top: auto;
   background-color: #57a;
+  
   box-shadow: 0 0 1em #124;
+  -moz-box-shadow: 0 0 1em #124;
+	-webkit-box-shadow: 0 0 1em #124;
+	
+	opacity: 0;
+	-webkit-transition-duration: 0.5s;
 }
 
 div.side {
   box-shadow: 0 0 1em #124 inset;
+  -moz-box-shadow: 0 0 1em #124 inset;
+	-webkit-box-shadow: 0 0 1em #124 inset;
 }
 
-input:focus + label.side { visibility: visible; }
-.field_with_errors:focus + label.side
+input:focus + label.side { visibility: visible; opacity: 1; }
 
 p.alert, p.notice  { 
 	color: white;
@@ -160,11 +179,18 @@ date {
 	background-color: #A00;
 	font-size: %80;
 	padding: 0.3em;
+	
 	border-radius: 1em;
+	-moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  
 	position: absolute;
 	left:14em; top: 1em;
 	width:12em;
+	
 	box-shadow: 0 0 1em #124;
+	-moz-box-shadow: 0 0 1em #124;
+	-webkit-box-shadow: 0 0 1em #124;
 }
 #errorExplanation ul { padding:0; margin:0; }
 #errorExplanation li {
@@ -177,10 +203,18 @@ date {
 #errorExplanation li:last-child {
 	border-bottom-left-radius:         .5em;
 	border-bottom-right-radius:        .5em;
+	-moz-border-radius-bottomleft:     .5em;
+  -moz-border-radius-bottomright:    .5em;
+  -webkit-border-bottom-right-radius:.5em;
+  -webkit-border-bottom-left-radius: .5em;
 }
 #errorExplanation li:first-child {
 	border-top-left-radius:         .5em;
 	border-top-right-radius:        .5em;
+	-moz-border-radius-topleft:     .5em;
+  -moz-border-radius-topright:    .5em;
+  -webkit-border-top-right-radius:.5em;
+  -webkit-border-top-left-radius: .5em;
 }
 .field_with_errors { display:inline; }
 .field_with_errors label{ color: #A00; }
@@ -194,8 +228,12 @@ div.admin {
 	opacity: 0;
 	
 	border-radius:         .5em;
-	
-	box-shadow:         0 0 1em #124;
+	-moz-border-radius:    .5em;
+  -webkit-border-radius: .5em;
+  
+	box-shadow: 0 0 1em #124;
+	-moz-box-shadow: 0 0 1em #124;
+	-webkit-box-shadow: 0 0 1em #124;
 }
 
 div.admin:hover, *:hover > div.admin {
@@ -212,15 +250,25 @@ div.admin:hover, *:hover > div.admin {
 .admin a:first-of-type {
   border-top-left-radius:         .5em;
 	border-top-right-radius:        .5em;
+	-moz-border-radius-topleft:     .5em;
+  -moz-border-radius-topright:    .5em;
+  -webkit-border-top-right-radius:.5em;
+  -webkit-border-top-left-radius: .5em;
 }
 
 .admin a:last-of-type {
   border-bottom-left-radius:         .5em;
 	border-bottom-right-radius:        .5em;
+	-moz-border-radius-bottomleft:     .5em;
+  -moz-border-radius-bottomright:    .5em;
+  -webkit-border-bottom-right-radius:.5em;
+  -webkit-border-bottom-left-radius: .5em;
 }
 
 a.admin {
-	border-radius:        .5em;
+	border-radius:         .5em;
+	-moz-border-radius:    .5em;
+  -webkit-border-radius: .5em;
 }
 
 a { 
