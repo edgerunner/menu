@@ -90,6 +90,10 @@ input:hover[type=submit] {
 form input[type=submit] {
 	border-bottom-right-radius: .5em;
 	border-bottom-left-radius: .5em;
+	-moz-border-radius-bottomleft:     .5em;
+  -moz-border-radius-bottomright:    .5em;
+  -webkit-border-bottom-right-radius:.5em;
+  -webkit-border-bottom-left-radius: .5em;
 }
 
 input[type=checkbox] {
@@ -110,6 +114,10 @@ form h1 {
 	
 	border-top-right-radius: .5em;
 	border-top-left-radius: .5em;
+	-moz-border-radius-topleft:     .5em;
+  -moz-border-radius-topright:    .5em;
+  -webkit-border-top-right-radius:.5em;
+  -webkit-border-top-left-radius: .5em;
 
 	font-size: inherit;
 	font-size: 135%;
