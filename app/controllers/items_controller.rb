@@ -23,7 +23,7 @@ class ItemsController < ApplicationController
     if @item.valid?
       @item.save!
       notice = t(:'notice.item.created', :name => @item.name)
-      redirect_to :back
+      redirect_to root_url
     else
       alert = t(:'errors.models.created', :name => t(:'activerecord.models.item'))
       flash[:item] = @item
@@ -43,7 +43,7 @@ class ItemsController < ApplicationController
     
     if @item.destroy
       flash.notice = t(:'notice.item.deleted', :name => @item.name)
-      redirect_to :back 
+      redirect_to root_url 
     else
       flash.alert = t(:'errors.models.deleted', :name => @item.name)
       redirect_to root_url
@@ -93,7 +93,7 @@ class ItemsController < ApplicationController
     if @item.valid?
       @item.save!
       flash.notice = t(:'notice.item.updated', :name => @item.name)
-      redirect_to :back
+      redirect_to root_url
     else
       flash.alert = t(:'errors.models.updated', :name => @item.name)
       flash[:item] = @item
