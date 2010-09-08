@@ -1,0 +1,10 @@
+body, 
+.side, 
+input[type=submit],
+form h1,
+#errorExplanation,
+#errorExplanation li,
+.admin,
+.admin a
+
+{ behavior: url(/stylesheets/ie-css3.htc); }
