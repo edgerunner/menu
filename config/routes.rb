@@ -1,4 +1,4 @@
-Menu::Application.routes.draw do |map|
+Menu::Application.routes.draw do
   
   constraints :host => /^#{APP_CONFIG[:domain]}$/ do
     defaults :host => APP_CONFIG[:domain] do

@@ -28,9 +28,9 @@ en:
 
   notice:
     item:
-      created: "{{name}} added"
-      updated: "{{name}} updated"
-      deleted: "{{name}} deleted"
+      created: "%{name} added"
+      updated: "%{name} updated"
+      deleted: "%{name} deleted"
       
   errors:
     template:
@@ -39,9 +39,9 @@ en:
         other: "There are some errors"
       body: "We could not do what you asked for"
     models:
-      created: "{{name}} was NOT added!"
-      updated: "{{name}} was NOT updated!"
-      deleted: "{{name}} was NOT deleted!"
+      created: "%{name} was NOT added!"
+      updated: "%{name} was NOT updated!"
+      deleted: "%{name} was NOT deleted!"
       
   admin:
     button:
