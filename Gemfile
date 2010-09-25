@@ -29,6 +29,6 @@ end
 
 ## Bundle gems used only in certain environments:
 # gem "rspec", :group => :test
-# group :test do
-#   gem "webrat"
-# end
+group :test do
+  gem "redgreen"
+end

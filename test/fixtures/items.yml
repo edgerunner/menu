@@ -1,15 +1,17 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name: MyString
-  details: MyString
+  name: Karnıyarık
+  details: Pilav
   price: 9.99
   position: 1
-  active: false
+  active: true
+  restaurant_id: 1
 
 two:
   name: MyString
   details: MyString
-  price: 9.99
-  position: 1
+  price: 6.49
+  position: 2
   active: false
+  restaurant_id: 1

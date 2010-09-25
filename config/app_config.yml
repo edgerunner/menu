@@ -7,7 +7,12 @@ development:
     - menu.menu.dev
 
 test:
-  domain: test.host
+  domain: menu.dev
+  reserved_domains:
+    - menu.dev
+    - blog.menu.dev
+    - www.menu.dev
+    - menu.menu.dev
 
 production:
   domain: menu.gen.tr
