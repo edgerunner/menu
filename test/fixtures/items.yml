@@ -6,12 +6,12 @@ one:
   price: 9.99
   position: 1
   active: true
-  restaurant_id: 1
+  restaurant: foo
 
 two:
-  name: MyString
-  details: MyString
+  name: Köfte
+  details: Ayran
   price: 6.49
   position: 2
   active: false
-  restaurant_id: 1
+  restaurant: foo
