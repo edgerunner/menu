@@ -1,3 +1,5 @@
+# coding: utf-8
+
 require 'test_helper'
 
 class RestaurantsControllerTest < ActionController::TestCase
@@ -53,10 +55,29 @@ class RestaurantsControllerTest < ActionController::TestCase
     foo = restaurants(:foo)
     
     @request.session[:restaurant_id] = foo.id
-    put :update, :host => foo.domain, :restaurant => { :name => "FooFoo" }
-    Rails.logger.debug "Dobik"
-    #assert_redirected_to root_url(:host => foo.domain, :port => request.port)
-    assert_equal "FooFoo", foo.name
+    @request.host = foo.domain
+    
+    put :update, :restaurant => { :name => "FooFoo" }
+    assert_redirected_to root_url
+    updated_foo = Restaurant.find(foo.id)
+    assert_equal "FooFoo", updated_foo.name
+  end
+  
+  test "illegal updating bar when logged in at foo" do
+    foo, bar = restaurants(:foo), restaurants(:bar)
+    
+    @request.session[:restaurant_id] = foo.id
+    @request.host = bar.domain
+    
+    put :update, :restaurant => { :name => "FooBar" }
+    
+    assert_redirected_to root_url
+    assert_equal "Oraya girilmez birader", flash[:alert]
+    
+    updated_foo = Restaurant.find(foo.id)
+    assert_equal "Foo", updated_foo.name
+    updated_bar = Restaurant.find(bar.id)
+    assert_equal "Bar", updated_bar.name
   end
   
   private
