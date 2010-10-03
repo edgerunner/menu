@@ -1,0 +1,6 @@
+<%= content_tag_for :p, item, :class => (item.active? ? "" : "inactive") do -%>
+  <strong><%= item.name %></strong> 
+  <%= content_tag :span, item.details unless item.details.blank? %> 
+  — <em><%= number_to_currency(item.price) %></em>
+  
+<%- end -%>

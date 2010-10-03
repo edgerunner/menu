@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="tr-TR" xmlns="http://www.w3.org/2005/Atom">
+  <id>tag:<%= @restaurant.domain %></id>
+  <link type="text/html" href="http://<%= @restaurant.domain %>" rel="alternate"/>
+  <title><%= @restaurant.name %></title>
+  <entry>
+    <id><%= @date %></id>
+    <title><%= l @date, :format => :close %></title>
+    <content type="html">
+      <%= render @items %>
+    </content>
+  </entry>
+</feed>
