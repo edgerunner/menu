@@ -30,5 +30,5 @@ end
 ## Bundle gems used only in certain environments:
 # gem "rspec", :group => :test
 group :test do
-  gem "redgreen"
+  gem "test-unit"
 end
