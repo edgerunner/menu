@@ -27,5 +27,18 @@ class ItemTest < ActiveSupport::TestCase
     assert new_item(price: 'Cabbar').invalid?
   end
   
+  test "pseudo numeric price should be corrected" do
+    { '25TL'        => "25.0", 
+      '$25'         => "25.0", 
+      '25 TL'       => "25.0", 
+      '$3.50'       => "3.50", 
+      '3,50'        => "3.50", 
+      "3,50TL"      => "3.50", 
+      "tam 40 lira" => "40.0"
+    }.each do |given,expected|
+      item = new_item(price: given)
+      assert item.valid?, "‘#{given}’ fails as a valid price"
+      assert_equal BigDecimal.new(expected), item.price, "#{given} should become #{expected} but turns out as #{item.price}"
+    end
   end
 end
