@@ -166,6 +166,20 @@ div.side {
 	-webkit-box-shadow: 0 0 1em #124 inset;
 }
 
+div.side a {
+  display: inline;
+  background-color: transparent;
+  font-weight: bold;
+  padding: 0 .2em;
+  border-radius: .2em;
+	-moz-border-radius: .2em;
+  -webkit-border-radius: .2em;
+}
+div.side a:hover {
+  color: #57A;
+  background-color: white;
+}
+
 input:focus + label.side { visibility: visible; opacity: 1; }
 
 p.alert, p.notice  { 
