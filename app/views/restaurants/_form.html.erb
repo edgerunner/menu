@@ -1,36 +1,14 @@
-<%= form_for @restaurant do |f| %>
-  <h1><%= t( @restaurant.new_record? ? :new_restaurant : :settings ) %></h1>
+<%= simple_form_for @restaurant do |f| %>
+<h1><%= t( @restaurant.new_record? ? :new_restaurant : :settings ) %></h1>
+<dl>
   <%= f.error_messages %>
-<dl>  
-  <dt>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </dt>
-  <% if @restaurant.new_record? %>
-  <dd>
-    <%= f.label :domain %><br />
-    <%= f.text_field :domain %>
-    <label class='side'><%= raw t :'helpers.label.restaurant.domain_info' %></label>
-  </dd>
-  <%- end -%>
-  <dd>
-    <%= f.label :info %><br />
-    <%= f.text_field :info %>
-  </dd>
-  <dd>
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </dd>
-  <dd>
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
-    <label class='side'><%= raw t :'helpers.label.restaurant.password_info' %></label>
-  </dd>
-  <dd>
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation %>
-  </dd>
-  
-  <p><%= f.submit %></p>
+  <%= f.input :name %>
+  <%= f.input :domain if @restaurant.new_record? %>
+  <%= f.input :info %>
+  <%= f.input :email %>
+  <%= f.input :password %>
+  <%= f.input :password_confirmation %>
+  <%= f.label :required_info %>
+  <%= f.button :submit %>
 </dl>
 <% end %>

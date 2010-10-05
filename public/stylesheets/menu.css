@@ -50,6 +50,8 @@ dl {
 	position:relative;
 }
 form dl { border-top: none; padding-top:0; margin-top:0;}
+form dd { margin-top: .5em; }
+
 dd {
 	margin: 0;
 }
@@ -63,13 +65,20 @@ input {
 	font: inherit;
 	border: none;
 	width: 100%;
-}
-
-input[type=password],
-input[type=text] {
 	color: #163460;
-	background-color:transparent;
-	border-bottom: 1px solid #5577AA;
+	background-color: transparent;
+	border-bottom: 1px solid #57a;
+}
+input:focus { 
+	box-shadow: 0 0 1em #124 inset;
+  -moz-box-shadow: 0 0 1em #124 inset;
+	-webkit-box-shadow: 0 0 .3em #57a inset;
+	border: inherit;
+	}
+
+input[type=checkbox],
+input[type=submit] {
+	border-bottom: none;
 }
 
 label {
@@ -97,7 +106,6 @@ form input[type=submit] {
 }
 
 input[type=checkbox] {
-	float: right;
 	width: auto;
 }
 
@@ -130,7 +138,7 @@ p {
 	margin: .5em 0;
 }
 
-div.side, label.side {
+div.side, label.hint {
 	color: white;
 	background-color: rgba(17,34,51,0.4);
 	font-size: %75;
@@ -146,7 +154,7 @@ div.side, label.side {
 	text-align:left;
 }
 
-label.side {
+label.hint {
   display: block;
   visibility: hidden;
   right: auto; left: 12em; top: auto;
@@ -180,7 +188,7 @@ div.side a:hover {
   background-color: white;
 }
 
-input:focus + label.side { visibility: visible; opacity: 1; }
+input:focus + label.hint { visibility: visible; opacity: 1; }
 
 p.alert, p.notice  { 
 	color: white;
@@ -239,7 +247,7 @@ date {
   -webkit-border-top-left-radius: .5em;
 }
 .field_with_errors { display:inline; }
-.field_with_errors label{ color: #A00; }
+.field_with_errors label.error{ color: #A00; }
 
 div.admin {
 
