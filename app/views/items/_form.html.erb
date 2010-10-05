@@ -1,11 +1,11 @@
 <%= simple_form_for(item) do |f| %>
   <h1><%= item.name.presence || t(:new_item) %></h1>
   <%= f.error_messages %>
-  <%= f.association :restaurant, as: :hidden %>
+  <%= f.association :restaurant, :as => :hidden %>
   <dl>
-    <%= f.input :name, wrapper_tag: :dt, placeholder: 'Leziz yemek' %>
+    <%= f.input :name, :wrapper_tag => :dt, :placeholder => 'Leziz yemek' %>
     <%= f.input :details %>
-    <%= f.input :price, as: :string %>
+    <%= f.input :price, :as => :string %>
     <%= f.input :active %>
     <%= f.label :required_info %>
     <%= f.button :submit %>
