@@ -1,3 +1,4 @@
+# coding: utf-8
 class Item < ActiveRecord::Base
   belongs_to :restaurant
   acts_as_list :scope => :restaurant

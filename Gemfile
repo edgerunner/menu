@@ -1,3 +1,4 @@
+# coding: utf-8
 # Edit this Gemfile to bundle your application's dependencies.
 source 'http://gemcutter.org'
 

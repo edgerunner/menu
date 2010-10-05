@@ -1,3 +1,4 @@
+# coding: utf-8
 Menu::Application.routes.draw do
   
   constraints :host => /^#{APP_CONFIG[:domain]}$/ do

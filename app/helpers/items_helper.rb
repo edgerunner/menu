@@ -1,3 +1,4 @@
+# coding: utf-8
 module ItemsHelper
   def small_cents(p)
     raw p.sub(/([.,]\d+\s)/, content_tag(:small, '\1'))

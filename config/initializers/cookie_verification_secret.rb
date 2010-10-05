@@ -1,3 +1,4 @@
+# coding: utf-8
 Menu::Application.configure do
   # Be sure to restart your server when you modify this file.
 

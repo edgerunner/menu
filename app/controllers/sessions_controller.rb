@@ -1,3 +1,4 @@
+# coding: utf-8
 class SessionsController < ApplicationController
   before_filter :set_restaurant
   

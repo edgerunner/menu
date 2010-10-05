@@ -1,3 +1,4 @@
+# coding: utf-8
 Menu::Application.configure do
   # Settings specified here will take precedence over those in config/environment.rb
 

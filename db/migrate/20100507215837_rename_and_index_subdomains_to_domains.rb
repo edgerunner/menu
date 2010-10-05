@@ -1,3 +1,4 @@
+# coding: utf-8
 class RenameAndIndexSubdomainsToDomains < ActiveRecord::Migration
   def self.up
     change_table :restaurants do |t|

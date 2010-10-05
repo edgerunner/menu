@@ -1,3 +1,4 @@
+# coding: utf-8
 require 'rake/testtask'
 
 desc 'Default: run unit tests.'

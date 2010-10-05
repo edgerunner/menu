@@ -1,3 +1,4 @@
+# coding: utf-8
 class SetItemActiveDefaultToTrue < ActiveRecord::Migration
   def self.up
     change_table :items do |t|

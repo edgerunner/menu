@@ -1,3 +1,4 @@
+# coding: utf-8
 # Be sure to restart your server when you modify this file.
 Menu::Application.configure do
   # Your secret key for verifying cookie session data integrity.

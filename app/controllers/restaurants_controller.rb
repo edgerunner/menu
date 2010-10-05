@@ -1,3 +1,4 @@
+# coding: utf-8
 class RestaurantsController < ApplicationController
   before_filter :set_restaurant, :check_for_admin, :only => [:edit, :update]
   
