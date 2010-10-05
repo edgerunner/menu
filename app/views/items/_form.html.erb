@@ -1,25 +1,13 @@
-<%= form_for(item) do |f| %>
-<h1><%= item.name || t(:new_item) %></h1>
-<%= f.error_messages %>
-<%= f.hidden_field :restaurant_id %>
-<dl>
-  <dt>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </dt>
-  <dd>
-    <%= f.label :details %><br />
-    <%= f.text_field :details %>
-  </dd>
-  <dd>
-    <%= f.label :price %><br />
-    <%= f.text_field :price %>
-  </dd>
-  <dd>
-    <%= f.check_box :active %><%= f.label :active %>
-  </dd>
-  <dt>
-    <%= f.submit %>
-  </dt>
-</dl>
+<%= simple_form_for(item) do |f| %>
+  <h1><%= item.name.presence || t(:new_item) %></h1>
+  <%= f.error_messages %>
+  <%= f.association :restaurant, as: :hidden %>
+  <dl>
+    <%= f.input :name, wrapper_tag: :dt, placeholder: 'Leziz yemek' %>
+    <%= f.input :details %>
+    <%= f.input :price, as: :string %>
+    <%= f.input :active %>
+    <%= f.label :required_info %>
+    <%= f.button :submit %>
+  </dl>
 <% end %>

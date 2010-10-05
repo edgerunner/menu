@@ -157,11 +157,6 @@ tr:
       
   helpers:
     label:
-      item:
-        name: "Yemeğin adı ne?"
-        details: "Yanında ne var?"
-        price: "Kaç lira?"
-        active: "Şu anda var mı bundan?"
       restaurant:
         name: "Restoranın adı ne?"
         domain: "Kullanmak istediğin alan adı nedir?"

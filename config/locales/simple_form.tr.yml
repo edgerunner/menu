@@ -1,0 +1,24 @@
+tr:
+  simple_form:
+    "yes": 'Evet'
+    "no": 'Hayır'
+    required:
+      text: 'Bunu doldurmak zorunlu'
+      mark: '•'
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      # html: '<abbr title="required">*</abbr>'
+    error_notification:
+      default_message: "hatalı"
+    # Labels and hints examples
+    labels:
+      required_info: "• ile işaretli satırları doldurmak zorunlu"
+      item:
+        name: "Yemeğin adı ne?"
+        details: "Yanında ne var?"
+        price: "Kaç lira?"
+        active: "Şu anda var mı bundan?"
+    hints:
+      item:
+        price: "Sadece rakam lütfen, para birimini biz hallederiz."
+

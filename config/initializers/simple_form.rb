@@ -4,12 +4,15 @@ SimpleForm.setup do |config|
   # Components used by the form builder to generate a complete input. You can remove
   # any of them, change the order, or even add your own components to the stack.
   # config.components = [ :label_input, :hint, :error ]
-
+  config.components = [ :label, :error, :input, :hint ]
+  
   # Default tag used on hints.
   # config.hint_tag = :span
+  config.hint_tag = :label
 
   # Default tag used on errors.
   # config.error_tag = :span
+  config.error_tag = :label
 
   # Method used to tidy up errors.
   # config.error_method = :first
@@ -19,6 +22,7 @@ SimpleForm.setup do |config|
 
   # You can wrap all inputs in a pre-defined tag.
   # config.wrapper_tag = :div
+  config.wrapper_tag = :dd
 
   # CSS class to add to all wrapper tags.
   # config.wrapper_class = :input
@@ -28,6 +32,7 @@ SimpleForm.setup do |config|
 
   # How the label text should be generated altogether with the required text.
   # config.label_text = lambda { |label, required| "#{required} #{label}" }
+  config.label_text = lambda { |label, required| "#{required} #{label} " }
 
   # Whether attributes are required by default (or not). Default is true.
   # config.required_by_default = true
