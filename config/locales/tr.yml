@@ -157,24 +157,6 @@ tr:
       
   helpers:
     label:
-      restaurant:
-        name: "Restoranın adı ne?"
-        domain: "Kullanmak istediğin alan adı nedir?"
-        domain_info:
-          Eğer <strong>.menu.gen.tr</strong> ile biten bir alan adı kullanmak istersen, 
-          Günün Menüsü′nü hemen seçtiğin adres ile kullanmaya başlayabilirsin.
-          Bunun dışında bir alan adı kullanmak için istediğin alan adını 
-          satın almış olman ve bazı ayarlar yapman gerekir. Seçtiğin alan adını
-          daha sonra değiştirmen ne yazık ki şimdilik mümkün değil, lütfen iyi seç.
-        email: "İletişim için bir e-posta adresi lütfen"
-        password: "Şifre ne olsun?"
-        password_info:
-          Şifre en az 4 karakter olmalı <br/>
-          Sistemi mümkün olduğunca basit tutmaya çalışıyoruz, menüyü düzenlemek için
-          bilmen gereken tek şey bu şifre olacak, o yüzden kolay tahmin edilebilir bir 
-          şifre kullanmamaya özen göster lütfen.
-        password_confirmation: "Şifreyi bir daha alalım, emin olalım."
-        info: "Ek bilgi olarak ne gösterelim? Adres, telefon vs?"
       password: "Şifre nedir?"
     submit:
       item:
