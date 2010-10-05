@@ -41,4 +41,8 @@ class ItemTest < ActiveSupport::TestCase
       assert_equal BigDecimal.new(expected), item.price, "#{given} should become #{expected} but turns out as #{item.price}"
     end
   end
+  
+  test "negative price should fail validation" do
+    assert new_item(price: -15).invalid?
+  end
 end

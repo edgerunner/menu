@@ -129,7 +129,9 @@ tr:
         wrong_length: "yanlış uzunlukta (tam olarak %{count} karakter olmalı)"
         taken: "hali hazırda kullanılmakta"
         not_a_number: "geçerli bir sayı değil"
-        greater_than: "%{count} sayısından büyük olmalı"
+        greater_than:
+          zero:  "sıfırdan büyük olmalı"
+          other: "%{count}'den büyük olmalı"
         greater_than_or_equal_to: "%{count} sayısına eşit veya büyük olmalı"
         equal_to: "tam olarak %{count} olmalı"
         less_than: "%{count} sayısından küçük olmalı"
