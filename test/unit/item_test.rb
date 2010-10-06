@@ -45,4 +45,10 @@ class ItemTest < ActiveSupport::TestCase
   test "negative price should fail validation" do
     assert new_item(price: -15).invalid?
   end
+
+  test "ALL CAPS should be corrected to Title Case in all text fields" do
+    item = new_item(name: "KÖFTE", details: "MAYDONOZLU CACIK")
+    assert_equal "Köfte", item.name
+    assert_equal "Maydonozlu Cacık", item.details
+  end
 end

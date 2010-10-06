@@ -18,4 +18,21 @@ class Item < ActiveRecord::Base
     corrected_value = match.to_s.sub(',','.').to_d
     write_attribute :price, corrected_value
   end
+  
+  def name= raw_name
+    return if raw_name.blank?
+    write_attribute :name, titleize_tr(raw_name)
+  end
+  def details= raw_details
+    return if raw_details.blank?
+    write_attribute :details, titleize_tr(raw_details)
+  end
+  
+  private
+  
+  def titleize_tr string
+    up="ABCÇDEFGĞHIİJLKMNOÖPQRSŞTUÜVWXYZ"
+    dn="abcçdefgğhıijlkmnoöpqrsştuüvwxyz"
+    string.gsub(/[ABCÇDEFGĞHIİJLKMNOÖPQRSŞTUÜVWXYZ]+/) { |w| w[0] + w[1..-1].tr(up, dn)}
+  end
 end
